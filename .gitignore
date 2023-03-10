@@ -4,3 +4,4 @@ bin/save
 src/.vs
 src/obj
 src/game.vcxproj.user
+bin/game_x64d.*
