@@ -3,3 +3,4 @@ bin/cache
 bin/save
 src/.vs
 src/obj
+src/game.vcxproj.user
