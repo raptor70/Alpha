@@ -1,5 +1,3 @@
-
-// test
 #ifndef NO_PRECOMP
 #define _CRT_SECURE_NO_WARNINGS
 
