@@ -1,0 +1,84 @@
+ENTITY
+	-	EntityBBoxX = Float(0.000)
+	-	EntityBBoxY = Float(0.000)
+	-	EntityBBoxZ = Float(0.000)
+Button
+	-	ButtonHoverColor = Color(255,255,255,255)
+	-	ButtonHoverTexture = Str("debug/debug.png")
+	-	ButtonPressedColor = Color(255,255,255,255)
+	-	ButtonPressedTexture = Str("debug/debug.png")
+	-	ButtonEvent = Str("EVENT")
+	-	ButtonPressedEvent = Str("(null)")
+	-	ButtonJustPressedSound = Str("(null)")
+	-	ButtonJustReleasedSound = Str("(null)")
+CheckButton
+	-	ButtonHoverColor = Color(255,255,255,255)
+	-	ButtonHoverTexture = Str("debug/debug.png")
+	-	ButtonPressedColor = Color(255,255,255,255)
+	-	ButtonPressedTexture = Str("debug/debug.png")
+	-	ButtonEvent = Str("EVENT")
+	-	ButtonPressedEvent = Str("(null)")
+	-	ButtonJustPressedSound = Str("(null)")
+	-	ButtonJustReleasedSound = Str("(null)")
+	-	CheckButtonChecked = Bool(false)
+	-	CheckButtonCheckedColor = Color(255,255,255,255)
+	-	CheckButtonCheckedTexture = Str("debug/debug.png")
+	-	CheckButtonCheckedHoverColor = Color(255,255,255,255)
+	-	CheckButtonCheckedHoverTexture = Str("debug/debug.png")
+	-	CheckButtonCheckedPressedColor = Color(255,255,255,255)
+	-	CheckButtonCheckedPressedTexture = Str("debug/debug.png")
+Quad
+	-	QuadSizeX = Float(1.000)
+	-	QuadSizeY = Float(1.000)
+	-	QuadColor = Color(255,255,255,255)
+	-	QuadTexture = Str("debug/debug.png")
+MaskedQuad
+	-	QuadSizeX = Float(1.000)
+	-	QuadSizeY = Float(1.000)
+	-	QuadColor = Color(255,255,255,255)
+	-	QuadTexture = Str("debug/debug.png")
+	-	MaskedQuadMaskMinX = Float(0.000)
+	-	MaskedQuadMaskMinY = Float(0.000)
+	-	MaskedQuadMaskMaxX = Float(0.000)
+	-	MaskedQuadMaskMaxY = Float(0.000)
+Sprite
+SpriteManager
+Text
+	-	TextValue = Str("(null)")
+	-	TextScale = Float(20.000)
+	-	TextHAlign = S32(1)
+	-	TextVAlign = S32(1)
+	-	TextFont = Str("debug")
+	-	TextColor = Color(255,255,255,255)
+	-	TextDeltaZ = Float(0.000)
+	-	TextBlockSizeX = Float(0.000)
+	-	TextBlockSizeY = Float(0.000)
+InputDragAndDrop
+	-	InputDragAndDropSpeed = Float(100.000)
+	-	InputDragAndDropInertiaSpeedFactor = Float(0.000)
+	-	InputDragAndDropInertiaFrictionFactor = Float(1.000)
+InputClick
+	-	InputClick2D = Bool(false)
+Multiplayer
+Script
+	-	ScriptPath = Str("(null)")
+	-	ScriptDefaultHide = Bool(false)
+AnimatedSkin
+Animation
+Camera
+	-	CameraIsOrtho = Bool(false)
+	-	CameraNear = Float(0.010)
+	-	CameraFar = Float(1000.000)
+	-	CameraOrthoY = Float(20.000)
+	-	CameraFov = Float(0.785)
+Mesh
+	-	MeshPath = Str("(null)")
+	-	MeshOutline = Color(0,0,0,255)
+Omni
+	-	OmniIntensity = Float(1.000)
+ParticlesSystem
+Spline
+GameGrid
+	-	GameGridSizeX = S32(256)
+	-	GameGridSizeY = S32(256)
+GameMultiplayer

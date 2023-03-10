@@ -1,0 +1,41 @@
+#include "lib_include.h"
+
+#define _CRT_SECURE_NO_WARNINGS
+
+// lib lua
+#define LUA_CORE
+#define lobject_c
+#include INCLUDE_LIB(LIB_LUA, src\luaconf.h) 
+#include INCLUDE_LIB(LIB_LUA, src\lapi.c)
+#include INCLUDE_LIB(LIB_LUA, src\lauxlib.c)
+#include INCLUDE_LIB(LIB_LUA, src\lbaselib.c)
+#include INCLUDE_LIB(LIB_LUA, src\lbitlib.c)
+#include INCLUDE_LIB(LIB_LUA, src\lcode.c)
+#include INCLUDE_LIB(LIB_LUA, src\lcorolib.c)
+#include INCLUDE_LIB(LIB_LUA, src\lctype.c)
+#include INCLUDE_LIB(LIB_LUA, src\ldblib.c)
+#include INCLUDE_LIB(LIB_LUA, src\ldebug.c)
+#include INCLUDE_LIB(LIB_LUA, src\ldo.c)
+#include INCLUDE_LIB(LIB_LUA, src\ldump.c)
+#include INCLUDE_LIB(LIB_LUA, src\lfunc.c)
+#include INCLUDE_LIB(LIB_LUA, src\lgc.c)
+#include INCLUDE_LIB(LIB_LUA, src\linit.c)
+#include INCLUDE_LIB(LIB_LUA, src\liolib.c)
+#include INCLUDE_LIB(LIB_LUA, src\llex.c)
+#include INCLUDE_LIB(LIB_LUA, src\lmathlib.c)
+#include INCLUDE_LIB(LIB_LUA, src\lmem.c)
+#include INCLUDE_LIB(LIB_LUA, src\lundump.c)
+#include INCLUDE_LIB(LIB_LUA, src\loadlib.c)
+#include INCLUDE_LIB(LIB_LUA, src\lobject.c)
+#include INCLUDE_LIB(LIB_LUA, src\lopcodes.c)
+#include INCLUDE_LIB(LIB_LUA, src\loslib.c)
+#include INCLUDE_LIB(LIB_LUA, src\lparser.c)
+#include INCLUDE_LIB(LIB_LUA, src\lstate.c)
+#include INCLUDE_LIB(LIB_LUA, src\lstring.c)
+#include INCLUDE_LIB(LIB_LUA, src\lstrlib.c)
+#include INCLUDE_LIB(LIB_LUA, src\ltable.c)
+#include INCLUDE_LIB(LIB_LUA, src\ltablib.c)
+#include INCLUDE_LIB(LIB_LUA, src\ltm.c)
+#include INCLUDE_LIB(LIB_LUA, src\lutf8lib.c)
+#include INCLUDE_LIB(LIB_LUA, src\lvm.c)
+#include INCLUDE_LIB(LIB_LUA, src\lzio.c)

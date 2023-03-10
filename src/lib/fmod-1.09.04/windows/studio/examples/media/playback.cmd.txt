@@ -1,0 +1,70 @@
+Playback::version, 1
+#
+# FMOD Studio playback recording
+#   FMOD Version = 10305
+#   SoftwareChannelCount = 64
+#   Initialize = { 32,0,0 }
+#   AdvSettings = { 0,0,0,0,0,0,0,0,180.000000,360.000000,4000.000000,0.000000,400,0,1500.000000,0,8,65536,65536,49152,2,0 }
+#   StudioAdvSettings = { 0,0 }
+#
+Playback::frame, 0
+System::loadBankFile, ..\media\Master Bank.bank, 1, 2097152
+System::loadBankFile, ..\media\Master Bank.strings.bank, 1, 2097408
+System::loadBankFile, ..\media\Vehicles.bank, 1, 2097664
+System::loadBankFile, ..\media\Weapons.bank, 1, 2097920
+Playback::frame, 3072
+System::flushCommands
+System::getEvent, {7aa5e8f1-8ec2-42c6-b465-1241a603a055}, 0, 2098176
+EventDescription::createInstance, 2098176, 2098944
+EventInstance::getParameter, 2098944, RPM, 2098688
+ParameterInstance::setValue, 2098688, 650
+EventInstance::start, 2098944
+System::setListenerAttributes, {{0,0,0},{0,0,0},{0,0,1},{0,1,0}}
+EventInstance::set3DAttributes, 2098944, {{0,0,2},{0,0,0},{0,0,1},{0,1,0}}
+Playback::frame, 305152
+System::getEvent, {1f687138-e06c-40f5-9bac-57f84bbcedd3}, 0, 2099456
+EventDescription::createInstance, 2099456, 2099968
+EventInstance::start, 2099968
+EventInstance::release, 2099968
+Playback::frame, 50176
+System::getEvent, {1f687138-e06c-40f5-9bac-57f84bbcedd3}, 0, 2099456
+EventDescription::createInstance, 2099456, 2100736
+EventInstance::start, 2100736
+EventInstance::release, 2100736
+Playback::frame, 14336
+System::getEvent, {1f687138-e06c-40f5-9bac-57f84bbcedd3}, 0, 2099456
+EventDescription::createInstance, 2099456, 2101504
+EventInstance::start, 2101504
+EventInstance::release, 2101504
+Playback::frame, 7168
+System::getEvent, {1f687138-e06c-40f5-9bac-57f84bbcedd3}, 0, 2099456
+EventDescription::createInstance, 2099456, 2102272
+EventInstance::start, 2102272
+EventInstance::release, 2102272
+Playback::frame, 7168
+System::getEvent, {1f687138-e06c-40f5-9bac-57f84bbcedd3}, 0, 2099456
+EventDescription::createInstance, 2099456, 2103040
+EventInstance::start, 2103040
+EventInstance::release, 2103040
+Playback::frame, 5120
+System::getEvent, {1f687138-e06c-40f5-9bac-57f84bbcedd3}, 0, 2099456
+EventDescription::createInstance, 2099456, 2103808
+EventInstance::start, 2103808
+EventInstance::release, 2103808
+Playback::frame, 7168
+System::getEvent, {1f687138-e06c-40f5-9bac-57f84bbcedd3}, 0, 2099456
+EventDescription::createInstance, 2099456, 2104576
+EventInstance::start, 2104576
+EventInstance::release, 2104576
+Playback::frame, 7168
+System::getEvent, {1f687138-e06c-40f5-9bac-57f84bbcedd3}, 0, 2099456
+EventDescription::createInstance, 2099456, 2105344
+EventInstance::start, 2105344
+EventInstance::release, 2105344
+Playback::frame, 48128
+Bank::unload, 2097152
+Bank::unload, 2097408
+Bank::unload, 2097664
+Bank::unload, 2097920
+Playback::frame, 3072
+System::flushCommands

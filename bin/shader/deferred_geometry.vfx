@@ -1,0 +1,14 @@
+void main()
+{
+	vec4 vertexPos4 = vec4(a_vVertexPosition,1);;
+	v.vViewPosition = u_mModelView * vertexPos4;
+	v.vViewNormal = normalize(mat3(u_mModelView) * a_vVertexNormal);
+	
+	v.vPixelUV = a_vVertexUV;
+#ifdef TEXTURE_LOWERLEFT
+	v.vPixelUV.t = 1 - v.vPixelUV.t;
+#endif
+	v.vPixelColor = u_vDiffuseColor * a_vVertexColor;	
+	
+	gl_Position = u_mClip * u_mMVP * vertexPos4;
+}

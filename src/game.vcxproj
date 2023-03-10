@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{42FFA283-E68C-43E0-8B51-A7FE34722104}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>game</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>obj/$(Platform)/$(Configuration)/</IntDir>
+    <TargetName>$(ProjectName)_x64d</TargetName>
+    <OutDir>../bin/</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>obj/$(Platform)/$(Configuration)/</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../bin/</OutDir>
+    <TargetName>$(ProjectName)_x64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Custom</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;PTW32_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>engine\;game\;lib\;lib\freetype-2.5.5\include\;lib\fmod-1.09.04\windows\lowlevel\inc\;lib\pthreads-2.9.1\;lib\zlib-1.2.8</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precomp.h</ForcedIncludeFiles>
+      <MinimalRebuild>false</MinimalRebuild>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalDependencies>Xinput9_1_0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;PTW32_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>engine\;game\;lib\;lib\freetype-2.5.5\include\;lib\fmod-1.09.04\windows\lowlevel\inc\;lib\pthreads-2.9.1\;lib\zlib-1.2.8</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precomp.h</ForcedIncludeFiles>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalDependencies>Xinput9_1_0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="engine\2d\component_button.cpp" />
+    <ClCompile Include="engine\2d\component_check_button.cpp" />
+    <ClCompile Include="engine\2d\component_quad.cpp" />
+    <ClCompile Include="engine\2d\component_sprite.cpp" />
+    <ClCompile Include="engine\2d\component_sprite_manager.cpp" />
+    <ClCompile Include="engine\2d\component_text.cpp" />
+    <ClCompile Include="engine\2d\font.cpp" />
+    <ClCompile Include="engine\2d\sprite.cpp" />
+    <ClCompile Include="engine\3d\animation.cpp" />
+    <ClCompile Include="engine\3d\index_buffer.cpp" />
+    <ClCompile Include="engine\3d\material.cpp" />
+    <ClCompile Include="engine\3d\mesh.cpp" />
+    <ClCompile Include="engine\3d\primitive_3d.cpp" />
+    <ClCompile Include="engine\3d\skel.cpp" />
+    <ClCompile Include="engine\3d\skin.cpp" />
+    <ClCompile Include="engine\3d\texture.cpp" />
+    <ClCompile Include="engine\3d\texture_manager.cpp" />
+    <ClCompile Include="engine\3d\vertex_buffer.cpp" />
+    <ClCompile Include="engine\application.cpp" />
+    <ClCompile Include="engine\core\color.cpp" />
+    <ClCompile Include="engine\core\name.cpp" />
+    <ClCompile Include="engine\core\name_static.cpp" />
+    <ClCompile Include="engine\core\ptr_to_.cpp" />
+    <ClCompile Include="engine\core\state.cpp" />
+    <ClCompile Include="engine\core\str.cpp" />
+    <ClCompile Include="engine\core\timer.cpp" />
+    <ClCompile Include="engine\database\database.cpp" />
+    <ClCompile Include="engine\debug\console_logger.cpp" />
+    <ClCompile Include="engine\debug\debug.cpp" />
+    <ClCompile Include="engine\debug\debug_flag_list.cpp" />
+    <ClCompile Include="engine\debug\debug_logger.cpp" />
+    <ClCompile Include="engine\debug\debug_renderer.cpp" />
+    <ClCompile Include="engine\debug\file_logger.cpp" />
+    <ClCompile Include="engine\debug\logger.cpp" />
+    <ClCompile Include="engine\debug\profiler.cpp" />
+    <ClCompile Include="engine\editor\editor.cpp" />
+    <ClCompile Include="engine\editor\editor_3dview.cpp" />
+    <ClCompile Include="engine\editor\editor_action.cpp" />
+    <ClCompile Include="engine\editor\editor_camera.cpp" />
+    <ClCompile Include="engine\editor\editor_dockspace.cpp" />
+    <ClCompile Include="engine\editor\editor_entities_properties.cpp" />
+    <ClCompile Include="engine\editor\editor_entities_tree.cpp" />
+    <ClCompile Include="engine\editor\editor_generated.cpp" />
+    <ClCompile Include="engine\editor\editor_gizmo.cpp" />
+    <ClCompile Include="engine\editor\editor_menu.cpp" />
+    <ClCompile Include="engine\editor\editor_panel.cpp" />
+    <ClCompile Include="engine\editor\editor_panel_properties.cpp" />
+    <ClCompile Include="engine\editor\editor_panel_treeview.cpp" />
+    <ClCompile Include="engine\file\base_file.cpp" />
+    <ClInclude Include="engine\application_commands.h" />
+    <ClInclude Include="engine\core\hash_map_of_.h" />
+    <ClInclude Include="engine\core\tree_of_.h" />
+    <ClInclude Include="engine\core\visitor.h" />
+    <ClInclude Include="engine\database\database.h" />
+    <ClInclude Include="engine\debug\debug_flag.h" />
+    <ClInclude Include="engine\debug\debug_flag_list.h" />
+    <ClInclude Include="engine\debug\profiler_optick.h" />
+    <ClInclude Include="engine\debug\profiler_pix.h" />
+    <ClInclude Include="engine\editor\editor_action.h" />
+    <ClInclude Include="engine\editor\editor_camera.h" />
+    <ClInclude Include="engine\editor\editor_dockspace.h" />
+    <ClInclude Include="engine\editor\editor_entities_properties.h" />
+    <ClInclude Include="engine\editor\editor_entities_tree.h" />
+    <ClInclude Include="engine\editor\editor_gizmo.h" />
+    <ClInclude Include="engine\editor\editor_include.h" />
+    <ClInclude Include="engine\editor\editor_menu.h" />
+    <ClInclude Include="engine\editor\editor_panel.h" />
+    <ClInclude Include="engine\editor\editor_panel_properties.h" />
+    <ClInclude Include="engine\editor\editor_panel_treeview.h" />
+    <ClInclude Include="engine\editor\ui\ui_entities_properties.h" />
+    <ClInclude Include="engine\editor\ui\ui_entities_properties_component.h" />
+    <ClInclude Include="engine\editor\ui\ui_entities_properties_component_sound.h" />
+    <ClInclude Include="engine\editor\ui\ui_entities_tree.h" />
+    <ClInclude Include="engine\editor\ui\ui_main.h" />
+    <ClInclude Include="engine\editor\ui\ui_top_bar.h" />
+    <ClInclude Include="engine\file\node_stream.h" />
+    <ClInclude Include="engine\file\stream.h" />
+    <ClInclude Include="engine\grid\grid.hpp">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClCompile Include="engine\file\node_stream.cpp" />
+    <ClCompile Include="engine\file\stream.cpp" />
+    <ClCompile Include="engine\grid\grid_cell.cpp" />
+    <ClCompile Include="engine\imgui\imgui_ex.cpp" />
+    <ClCompile Include="engine\imgui\imgui_manager.cpp" />
+    <ClCompile Include="engine\input\component_input_drag_and_drop.cpp" />
+    <ClCompile Include="engine\input\component_input_click.cpp" />
+    <ClCompile Include="engine\input\device.cpp" />
+    <ClCompile Include="engine\input\device_keyboard.cpp" />
+    <ClCompile Include="engine\input\device_mouse.cpp" />
+    <ClCompile Include="engine\input\device_pad.cpp" />
+    <ClCompile Include="engine\input\input_manager.cpp" />
+    <ClCompile Include="engine\math\box.cpp" />
+    <ClCompile Include="engine\math\matrix2x2.cpp" />
+    <ClCompile Include="engine\math\matrix3x3.cpp" />
+    <ClCompile Include="engine\math\matrix4x4.cpp" />
+    <ClCompile Include="engine\math\plane.cpp" />
+    <ClCompile Include="engine\math\quaternion.cpp" />
+    <ClCompile Include="engine\math\rect.cpp" />
+    <ClCompile Include="engine\math\segment.cpp" />
+    <ClCompile Include="engine\math\sphere.cpp" />
+    <ClCompile Include="engine\math\spline.cpp" />
+    <ClCompile Include="engine\math\vector2.cpp" />
+    <ClCompile Include="engine\math\vector3.cpp" />
+    <ClCompile Include="engine\math\vector4.cpp" />
+    <ClCompile Include="engine\memory\memory_allocator.cpp" />
+    <ClCompile Include="engine\multiplayer\component_multiplayer.cpp" />
+    <ClCompile Include="engine\multiplayer\lobby.cpp" />
+    <ClCompile Include="engine\multiplayer\network.cpp" />
+    <ClCompile Include="engine\multiplayer\network_steam.cpp" />
+    <ClCompile Include="engine\multiplayer\player.cpp" />
+    <ClCompile Include="engine\params\params.cpp" />
+    <ClCompile Include="engine\params\params_table.cpp" />
+    <ClCompile Include="engine\platform\platform_manager.cpp" />
+    <ClCompile Include="engine\renderer\framebuffer.cpp" />
+    <ClCompile Include="engine\renderer\gl_extension.cpp" />
+    <ClCompile Include="engine\renderer\renderer.cpp" />
+    <ClCompile Include="engine\renderer\renderer_camera.cpp" />
+    <ClCompile Include="engine\renderer\renderer_datas.cpp" />
+    <ClCompile Include="engine\renderer\renderer_driver.cpp" />
+    <ClCompile Include="engine\renderer\renderer_driver_gl.cpp" />
+    <ClCompile Include="engine\renderer\renderer_driver_metal.cpp" />
+    <ClCompile Include="engine\renderer\renderer_driver_vulkan.cpp" />
+    <ClCompile Include="engine\renderer\renderer_pass.cpp" />
+    <ClCompile Include="engine\renderer\shader.cpp" />
+    <ClCompile Include="engine\renderer\shader_data.cpp" />
+    <ClCompile Include="engine\renderer\shader_group.cpp" />
+    <ClCompile Include="engine\resource\loader.cpp" />
+    <ClCompile Include="engine\resource\loader_BMP.cpp" />
+    <ClCompile Include="engine\resource\loader_DAE.cpp" />
+    <ClCompile Include="engine\resource\loader_DB.cpp" />
+    <ClCompile Include="engine\resource\loader_factory.cpp" />
+    <ClCompile Include="engine\resource\loader_GLTF.cpp" />
+    <ClCompile Include="engine\resource\loader_LUA.cpp" />
+    <ClCompile Include="engine\resource\loader_PNG.cpp" />
+    <ClCompile Include="engine\resource\loader_TIF.cpp" />
+    <ClCompile Include="engine\resource\loader_TTF.cpp" />
+    <ClCompile Include="engine\resource\loader_VFX.cpp" />
+    <ClCompile Include="engine\resource\loader_XML.cpp" />
+    <ClCompile Include="engine\resource\resource.cpp" />
+    <ClCompile Include="engine\resource\resource_manager.cpp" />
+    <ClCompile Include="engine\script\component_script.cpp" />
+    <ClCompile Include="engine\script\flow_script.cpp" />
+    <ClCompile Include="engine\script\flow_script_manager.cpp" />
+    <ClCompile Include="engine\script\script.cpp" />
+    <ClCompile Include="engine\script\script_register.cpp" />
+    <ClCompile Include="engine\sound\sound_manager.cpp" />
+    <ClCompile Include="engine\thread\thread.cpp" />
+    <ClCompile Include="engine\thread\thread_mutex.cpp" />
+    <ClCompile Include="engine\window\window.cpp" />
+    <ClCompile Include="engine\window\window_3dscreen.cpp" />
+    <ClCompile Include="engine\window\window_component.cpp" />
+    <ClCompile Include="engine\window\window_menu.cpp" />
+    <ClCompile Include="engine\window\window_textbox.cpp" />
+    <ClCompile Include="engine\window\window_whiterect.cpp" />
+    <ClCompile Include="engine\world\component_animated_skin.cpp" />
+    <ClCompile Include="engine\world\component_animation.cpp" />
+    <ClCompile Include="engine\world\component_camera.cpp" />
+    <ClCompile Include="engine\world\component_factory.cpp" />
+    <ClCompile Include="engine\world\component_mesh.cpp" />
+    <ClCompile Include="engine\world\component_omni.cpp" />
+    <ClCompile Include="engine\world\component_particles_system.cpp" />
+    <ClCompile Include="engine\world\component_spline.cpp" />
+    <ClCompile Include="engine\world\component.cpp" />
+    <ClCompile Include="engine\world\entity.cpp" />
+    <ClCompile Include="engine\world\world.cpp" />
+    <ClCompile Include="game\game.cpp" />
+    <ClCompile Include="game\game_name_static.cpp" />
+    <ClCompile Include="game\grid\component_game_grid.cpp" />
+    <ClCompile Include="game\grid\game_grid.cpp" />
+    <ClCompile Include="game\main.cpp" />
+    <ClCompile Include="game\multiplayer\game_component_multiplayer.cpp" />
+    <ClCompile Include="game\multiplayer\game_lobby.cpp" />
+    <ClCompile Include="game\multiplayer\game_player.cpp" />
+    <ClCompile Include="game\precomp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lib\lib_freetype.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="lib\lib_imgui.cpp" />
+    <ClCompile Include="lib\lib_lua.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="lib\lib_png.c">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Default</CompileAs>
+    </ClCompile>
+    <ClCompile Include="lib\lib_pthread.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="lib\lib_sqlite.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="lib\lib_tiff.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="lib\lib_zlib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine\2d\component_button.h" />
+    <ClInclude Include="engine\2d\component_check_button.h" />
+    <ClInclude Include="engine\2d\component_quad.h" />
+    <ClInclude Include="engine\2d\component_sprite.h" />
+    <ClInclude Include="engine\2d\component_sprite_manager.h" />
+    <ClInclude Include="engine\2d\component_text.h" />
+    <ClInclude Include="engine\2d\font.h" />
+    <ClInclude Include="engine\2d\sprite.h" />
+    <ClInclude Include="engine\3d\animation.h" />
+    <ClInclude Include="engine\3d\index_buffer.h" />
+    <ClInclude Include="engine\3d\material.h" />
+    <ClInclude Include="engine\3d\mesh.h" />
+    <ClInclude Include="engine\3d\primitive_3d.h" />
+    <ClInclude Include="engine\3d\skel.h" />
+    <ClInclude Include="engine\3d\skin.h" />
+    <ClInclude Include="engine\3d\texture.h" />
+    <ClInclude Include="engine\3d\texture_manager.h" />
+    <ClInclude Include="engine\3d\vertex_buffer.h" />
+    <ClInclude Include="engine\application.h" />
+    <ClInclude Include="engine\core\array_of_.h" />
+    <ClInclude Include="engine\core\color.h" />
+    <ClInclude Include="engine\core\list_of_.h" />
+    <ClInclude Include="engine\core\name.h" />
+    <ClInclude Include="engine\core\name_static.h" />
+    <ClInclude Include="engine\core\primitive.h" />
+    <ClInclude Include="engine\core\ptr_to_.h" />
+    <ClInclude Include="engine\core\singleton.h" />
+    <ClInclude Include="engine\core\sort.h" />
+    <ClInclude Include="engine\core\state.h" />
+    <ClInclude Include="engine\core\str.h" />
+    <ClInclude Include="engine\core\timer.h" />
+    <ClInclude Include="engine\debug\console_logger.h" />
+    <ClInclude Include="engine\debug\debug.h" />
+    <ClInclude Include="engine\debug\debug_logger.h" />
+    <ClInclude Include="engine\debug\debug_renderer.h" />
+    <ClInclude Include="engine\debug\file_logger.h" />
+    <ClInclude Include="engine\debug\logger.h" />
+    <ClInclude Include="engine\debug\main_logger.h" />
+    <ClInclude Include="engine\debug\profiler.h" />
+    <ClInclude Include="engine\editor\editor.h" />
+    <ClInclude Include="engine\editor\editor_3dview.h" />
+    <ClInclude Include="engine\engine_include.h" />
+    <ClInclude Include="engine\file\base_file.h" />
+    <ClInclude Include="engine\grid\grid.h" />
+    <ClInclude Include="engine\grid\grid_cell.h" />
+    <ClInclude Include="engine\imgui\imgui_ex.h" />
+    <ClInclude Include="engine\imgui\imgui_manager.h" />
+    <ClInclude Include="engine\input\component_input_drag_and_drop.h" />
+    <ClInclude Include="engine\input\component_input_click.h" />
+    <ClInclude Include="engine\input\device.h" />
+    <ClInclude Include="engine\input\device_key.h" />
+    <ClInclude Include="engine\input\device_keyboard.h" />
+    <ClInclude Include="engine\input\device_mouse.h" />
+    <ClInclude Include="engine\input\device_pad.h" />
+    <ClInclude Include="engine\input\device_pad_key.h" />
+    <ClInclude Include="engine\input\input_manager.h" />
+    <ClInclude Include="engine\math\box.h" />
+    <ClInclude Include="engine\math\interpolation.h" />
+    <ClInclude Include="engine\math\math_constant.h" />
+    <ClInclude Include="engine\math\math_helper.h" />
+    <ClInclude Include="engine\math\matrix2x2.h" />
+    <ClInclude Include="engine\math\matrix3x3.h" />
+    <ClInclude Include="engine\math\matrix4x4.h" />
+    <ClInclude Include="engine\math\plane.h" />
+    <ClInclude Include="engine\math\quaternion.h" />
+    <ClInclude Include="engine\math\rect.h" />
+    <ClInclude Include="engine\math\segment.h" />
+    <ClInclude Include="engine\math\sphere.h" />
+    <ClInclude Include="engine\math\spline.h" />
+    <ClInclude Include="engine\math\vector2.h" />
+    <ClInclude Include="engine\math\vector3.h" />
+    <ClInclude Include="engine\math\vector4.h" />
+    <ClInclude Include="engine\memory\memory.h" />
+    <ClInclude Include="engine\memory\memory_allocator.h" />
+    <ClInclude Include="engine\multiplayer\component_multiplayer.h" />
+    <ClInclude Include="engine\multiplayer\lobby.h" />
+    <ClInclude Include="engine\multiplayer\network.h" />
+    <ClInclude Include="engine\multiplayer\network_steam.h" />
+    <ClInclude Include="engine\multiplayer\player.h" />
+    <ClInclude Include="engine\params\params.h" />
+    <ClInclude Include="engine\params\params_table.h" />
+    <ClInclude Include="engine\params\params_type.h" />
+    <ClInclude Include="engine\platform\platform_manager.h" />
+    <ClInclude Include="engine\platform\platform_win32.h" />
+    <ClInclude Include="engine\renderer\framebuffer.h" />
+    <ClInclude Include="engine\renderer\glext.h" />
+    <ClInclude Include="engine\renderer\gl_extension.h" />
+    <ClInclude Include="engine\renderer\gl_extension_list.h" />
+    <ClInclude Include="engine\renderer\gl_include.h" />
+    <ClInclude Include="engine\renderer\renderer.h" />
+    <ClInclude Include="engine\renderer\renderer_camera.h" />
+    <ClInclude Include="engine\renderer\renderer_datas.h" />
+    <ClInclude Include="engine\renderer\renderer_driver.h" />
+    <ClInclude Include="engine\renderer\renderer_driver_data.h" />
+    <ClInclude Include="engine\renderer\renderer_driver_gl.h" />
+    <ClInclude Include="engine\renderer\renderer_driver_metal.h" />
+    <ClInclude Include="engine\renderer\renderer_driver_vulkan.h" />
+    <ClInclude Include="engine\renderer\renderer_pass.h" />
+    <ClInclude Include="engine\renderer\renderer_shader.h" />
+    <ClInclude Include="engine\renderer\renderer_shader_list.h" />
+    <ClInclude Include="engine\renderer\renderer_state.h" />
+    <ClInclude Include="engine\renderer\shader.h" />
+    <ClInclude Include="engine\renderer\shader_data.h" />
+    <ClInclude Include="engine\renderer\shader_desc.h" />
+    <ClInclude Include="engine\renderer\shader_group.h" />
+    <ClInclude Include="engine\renderer\shader_params.h" />
+    <ClInclude Include="engine\renderer\vk_extension.h" />
+    <ClInclude Include="engine\renderer\wglext.h" />
+    <ClInclude Include="engine\resource\loader.h" />
+    <ClInclude Include="engine\resource\loader_BMP.h" />
+    <ClInclude Include="engine\resource\loader_DAE.h" />
+    <ClInclude Include="engine\resource\loader_DB.h" />
+    <ClInclude Include="engine\resource\loader_factory.h" />
+    <ClInclude Include="engine\resource\loader_GLTF.h" />
+    <ClInclude Include="engine\resource\loader_LUA.h" />
+    <ClInclude Include="engine\resource\loader_PNG.h" />
+    <ClInclude Include="engine\resource\loader_TIF.h" />
+    <ClInclude Include="engine\resource\loader_TTF.h" />
+    <ClInclude Include="engine\resource\loader_VFX.h" />
+    <ClInclude Include="engine\resource\loader_XML.h" />
+    <ClInclude Include="engine\resource\resource.h" />
+    <ClInclude Include="engine\resource\resource_manager.h" />
+    <ClInclude Include="engine\script\component_script.h" />
+    <ClInclude Include="engine\script\flow_script.h" />
+    <ClInclude Include="engine\script\flow_script_manager.h" />
+    <ClInclude Include="engine\script\script.h" />
+    <ClInclude Include="engine\script\script_register.h" />
+    <ClInclude Include="engine\sound\sound_manager.h" />
+    <ClInclude Include="engine\thread\thread.h" />
+    <ClInclude Include="engine\thread\thread_mutex.h" />
+    <ClInclude Include="engine\window\window.h" />
+    <ClInclude Include="engine\window\window_3dscreen.h" />
+    <ClInclude Include="engine\window\window_component.h" />
+    <ClInclude Include="engine\window\window_menu.h" />
+    <ClInclude Include="engine\window\window_platform_data.h" />
+    <ClInclude Include="engine\window\window_ptr.h" />
+    <ClInclude Include="engine\window\window_textbox.h" />
+    <ClInclude Include="engine\window\window_whiterect.h" />
+    <ClInclude Include="engine\world\component_animated_skin.h" />
+    <ClInclude Include="engine\world\component_animation.h" />
+    <ClInclude Include="engine\world\component_camera.h" />
+    <ClInclude Include="engine\world\component_factory.h" />
+    <ClInclude Include="engine\world\component_mesh.h" />
+    <ClInclude Include="engine\world\component_omni.h" />
+    <ClInclude Include="engine\world\component_particles_system.h" />
+    <ClInclude Include="engine\world\component_spline.h" />
+    <ClInclude Include="engine\world\component.h" />
+    <ClInclude Include="engine\world\entity.h" />
+    <ClInclude Include="engine\world\world.h" />
+    <ClInclude Include="game\game.h" />
+    <ClInclude Include="game\game_debug_flag.h" />
+    <ClInclude Include="game\game_name_static.h" />
+    <ClInclude Include="game\grid\component_game_grid.h" />
+    <ClInclude Include="game\grid\game_grid.h" />
+    <ClInclude Include="game\multiplayer\game_component_multiplayer.h" />
+    <ClInclude Include="game\multiplayer\game_lobby.h" />
+    <ClInclude Include="game\multiplayer\game_player.h" />
+    <ClInclude Include="game\precomp.h" />
+    <ClInclude Include="lib\lib_include.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="engine\editor\generate_moc.bat" />
+    <None Include="engine\editor\moc\editor.moc" />
+    <None Include="engine\editor\moc\editor_3dview.moc" />
+    <None Include="engine\editor\moc\editor_entities_properties.moc" />
+    <None Include="engine\editor\moc\editor_entities_tree.moc" />
+    <None Include="engine\editor\moc\editor_menu.moc" />
+    <None Include="engine\editor\ui\ui_entities_properties.ui" />
+    <None Include="engine\editor\ui\ui_entities_properties_component.ui" />
+    <None Include="engine\editor\ui\ui_entities_properties_component_sound.ui" />
+    <None Include="engine\editor\ui\ui_entities_tree.ui" />
+    <None Include="engine\editor\ui\ui_main.ui" />
+    <None Include="engine\editor\ui\ui_top_bar.ui" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,8 @@
+void main()
+{
+	gl_Position = u_mClip * vec4(a_vVertexPosition,1);
+	v.vPixelUV = a_vVertexUV;
+#ifdef TEXTURE_LOWERLEFT
+	v.vPixelUV.t = 1 - v.vPixelUV.t;
+#endif
+}

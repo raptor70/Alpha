@@ -1,0 +1,17 @@
+void main()
+{
+	vec4 vertexPos4 = vec4(a_vVertexPosition,1);;
+	v.vPixelColor = u_vDiffuseColor;
+	
+	mat4 ModelView = u_mModelView;
+	ModelView[0][0] = length(ModelView[0]);
+	ModelView[0][1] = 0;
+	ModelView[0][2] = 0;
+	ModelView[1][0] = 0;
+	ModelView[1][1] = length(ModelView[1]);
+	ModelView[1][2] = 0;
+	ModelView[2][0] = 0;
+	ModelView[2][1] = 0;
+	ModelView[2][2] = length(ModelView[2]);
+	gl_Position = u_mClip * u_mProj * ModelView * vertexPos4;
+}

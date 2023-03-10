@@ -1,0 +1,15 @@
+<World>
+	<Entity Name="Timer">
+		<Pos Value="500.000000;50.000000;0.000000"/>
+		<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+		<Scale Value="1.000000;1.000000;1.000000"/>
+		<Hide Value="FALSE"/>
+		<Color Value="255;255;255;255"/>
+		<Component Type="Text">
+			<Param Name="TextValue" Type="Str" Value="12.0s"/>
+			<Param Name="TextScale" Type="Float" Value="40.000000"/>
+			<Param Name="TextColor" Type="Color" Value="255;255;255;255"/>
+		</Component>
+	</Entity>
+</World>
+

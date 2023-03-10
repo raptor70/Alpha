@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game", "game.vcxproj", "{42FFA283-E68C-43E0-8B51-A7FE34722104}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2B5EA037-62FA-4BA1-982C-EC8C7359C3A7}"
+	ProjectSection(SolutionItems) = preProject
+		Performance1.psess = Performance1.psess
+		Performance2.psess = Performance2.psess
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42FFA283-E68C-43E0-8B51-A7FE34722104}.Debug|x64.ActiveCfg = Debug|x64
+		{42FFA283-E68C-43E0-8B51-A7FE34722104}.Debug|x64.Build.0 = Debug|x64
+		{42FFA283-E68C-43E0-8B51-A7FE34722104}.Release|x64.ActiveCfg = Release|x64
+		{42FFA283-E68C-43E0-8B51-A7FE34722104}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B78E6E7-2DC7-4E69-979A-71279D100E63}
+	EndGlobalSection
+EndGlobal

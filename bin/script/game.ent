@@ -1,0 +1,104 @@
+{
+    "Entity": {
+        "Name": "script/game.lua",
+        "Pos": [0.0, 0.0, 0.0],
+        "Rot": [0.0, 0.0, 0.0, 1.0],
+        "Scale": [1.0, 1.0, 1.0],
+        "Hide": false,
+        "Color": [255, 255, 255, 255],
+        "Entity": {
+            "Name": "camera",
+            "Pos": [18.0, 25.0, 83.0],
+            "Rot": [-0.011831999756395817, 0.9881290197372437, -0.10385599732398987, -0.11258299648761749],
+            "Scale": [1.0, 1.0, 1.0],
+            "Hide": false,
+            "Color": [255, 255, 255, 255],
+            "Component": {
+                "Type": "Camera",
+                "CameraNear": 10.0,
+                "CameraFar": 1500.0,
+                "CameraOrthoY": 30.0,
+                "CameraFov": 0.4000000059604645
+            }
+        },
+        "Entity": {
+            "Name": "VikingRoom",
+            "Pos": [0.0, 0.0, 0.0],
+            "Rot": [0.0, 0.0, 0.0, 1.0],
+            "Scale": [1.0, 1.0, 1.0],
+            "Hide": false,
+            "Color": [255, 255, 255, 255],
+            "Component": {
+                "Type": "Mesh",
+                "MeshPath": "mesh/viking_room.gltf"
+            },
+            "Entity": {
+                "Name": "OmniL",
+                "Pos": [-10.01200008392334, 10.670000076293946, -4.501999855041504],
+                "Rot": [0.0, 0.0, 0.0, 1.0],
+                "Scale": [12.0, 1.0, 1.0],
+                "Hide": false,
+                "Color": [243, 250, 0, 255],
+                "Component": {
+                    "Type": "Omni"
+                }
+            },
+            "Entity": {
+                "Name": "OmniR",
+                "Pos": [11.411992073059082, 10.670000076293946, -4.445000171661377],
+                "Rot": [0.0, 0.0, 0.0, 1.0],
+                "Scale": [12.0, 1.0, 1.0],
+                "Hide": false,
+                "Color": [243, 250, 0, 255],
+                "Component": {
+                    "Type": "Omni"
+                }
+            },
+            "Entity": {
+                "Name": "SmallOmniL",
+                "Pos": [-2.742000102996826, 4.491000175476074, -4.794000148773193],
+                "Rot": [0.0, 0.0, 0.0, 1.0],
+                "Scale": [4.0, 1.0, 1.0],
+                "Hide": false,
+                "Color": [243, 250, 0, 255],
+                "Component": {
+                    "Type": "Omni"
+                }
+            },
+            "Entity": {
+                "Name": "SmallOmniR",
+                "Pos": [2.9609999656677248, 4.491000175476074, -5.124000072479248],
+                "Rot": [0.0, 0.0, 0.0, 1.0],
+                "Scale": [4.0, 1.0, 1.0],
+                "Hide": false,
+                "Color": [243, 250, 0, 255],
+                "Component": {
+                    "Type": "Omni"
+                }
+            },
+            "Entity": {
+                "Name": "OmniFire",
+                "Pos": [0.3397819995880127, 0.7268980145454407, 5.840354919433594],
+                "Rot": [0.0, 0.0, 0.0, 1.0],
+                "Scale": [17.0, 1.0, 1.0],
+                "Hide": false,
+                "Color": [253, 70, 4, 255],
+                "Component": {
+                    "Type": "Omni"
+                }
+            }
+        },
+        "Entity": {
+            "Name": "Floor",
+            "Pos": [0.0, 0.0, 0.0],
+            "Rot": [0.0, 0.0, 0.0, 1.0],
+            "Scale": [1.0, 1.0, 1.0],
+            "Hide": false,
+            "Color": [255, 255, 255, 255],
+            "Component": {
+                "Type": "Mesh",
+                "MeshPath": "mesh/floor.gltf"
+            }
+        }
+    }
+}

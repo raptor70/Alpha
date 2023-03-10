@@ -1,0 +1,35 @@
+<World>
+	<Entity Name="Tower_Body">
+		<Pos X="0.000000" Y="0.000000" Z="0.000000"/>
+		<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		<Component Type="Mesh">
+			<Param Name="MeshPath" Type="Str" Value="mesh/Tower.DAE"/>
+		</Component>
+		<Entity Name="Tower_Flags">
+			<Pos X="0.000000" Y="0.000000" Z="0.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Tower_Flags.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Tower_Head">
+			<Pos X="0.000000" Y="2.100000" Z="0.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Tower_Head.DAE"/>
+			</Component>
+			<Entity Name="Tower_Canon">
+				<Pos X="0.000000" Y="0.600000" Z="0.000000"/>
+				<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+				<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+				<Component Type="Mesh">
+					<Param Name="MeshPath" Type="Str" Value="mesh/Tower_Canon.DAE"/>
+				</Component>
+			</Entity>
+		</Entity>
+	</Entity>
+</World>
+

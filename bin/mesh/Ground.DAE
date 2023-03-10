@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2017-07-31T21:32:44Z</created><keywords></keywords><modified>2017-07-31T21:32:44Z</modified><revision></revision><subject></subject><title></title><unit meter="1.000000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_images>
+    <image id="Map #22-image" name="Map #22"><init_from>file://G:\Projects\Projects\CT Three\bin\textures\mesh\Empty.png</init_from></image>
+  </library_images>
+  <library_materials>
+    <material id="Wall" name="Wall">
+      <instance_effect url="#Wall-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Wall-fx" name="Wall">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.588000  0.588000 0.588000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #22-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Ground-lib" name="GroundMesh">
+      <mesh>
+        <source id="Ground-POSITION">
+          <float_array id="Ground-POSITION-array" count="75">
+-5000.000000 -5000.000000 0.000000
+-2500.000000 -5000.000000 0.000000
+0.000000 -5000.000000 0.000000
+2500.000000 -5000.000000 0.000000
+5000.000000 -5000.000000 0.000000
+-5000.000000 -2500.000000 0.000000
+-2500.000000 -2500.000000 0.000000
+0.000000 -2500.000000 0.000000
+2500.000000 -2500.000000 0.000000
+5000.000000 -2500.000000 0.000000
+-5000.000000 0.000000 0.000000
+-2500.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+2500.000000 0.000000 0.000000
+5000.000000 0.000000 0.000000
+-5000.000000 2500.000000 0.000000
+-2500.000000 2500.000000 0.000000
+0.000000 2500.000000 0.000000
+2500.000000 2500.000000 0.000000
+5000.000000 2500.000000 0.000000
+-5000.000000 5000.000000 0.000000
+-2500.000000 5000.000000 0.000000
+0.000000 5000.000000 0.000000
+2500.000000 5000.000000 0.000000
+5000.000000 5000.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Ground-POSITION-array" count="25" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Ground-Normal0">
+          <float_array id="Ground-Normal0-array" count="288">
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Ground-Normal0-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Ground-UV0">
+          <float_array id="Ground-UV0-array" count="50">
+0.000000 0.000000
+0.250000 0.000000
+0.500000 0.000000
+0.750000 0.000000
+1.000000 0.000000
+0.000000 0.250000
+0.250000 0.250000
+0.500000 0.250000
+0.750000 0.250000
+1.000000 0.250000
+0.000000 0.500000
+0.250000 0.500000
+0.500000 0.500000
+0.750000 0.500000
+1.000000 0.500000
+0.000000 0.750000
+0.250000 0.750000
+0.500000 0.750000
+0.750000 0.750000
+1.000000 0.750000
+0.000000 1.000000
+0.250000 1.000000
+0.500000 1.000000
+0.750000 1.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Ground-UV0-array" count="25" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Ground-VERTEX">
+          <input semantic="POSITION" source="#Ground-POSITION"/>
+        </vertices>
+        <triangles count="32" material="Wall"><input semantic="VERTEX" offset="0" source="#Ground-VERTEX"/><input semantic="NORMAL" offset="1" source="#Ground-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Ground-UV0"/><p> 6 0 6 5 1 5 0 2 0 6 3 6 0 4 0 1 5 1 7 6 7 6 7 6 1 8 1 7 9 7 1 10 1 2 11 2 8 12 8 7 13 7 2 14 2 8 15 8 2 16 2 3 17 3 9 18 9 8 19 8 3 20 3 9 21 9 3 22 3 4 23 4 11 24 11 10 25 10 5 26 5 11 27 11 5 28 5 6 29 6 12 30 12 11 31 11 6 32 6 12 33 12 6 34 6 7 35 7 13 36 13 12 37 12 7 38 7 13 39 13 7 40 7 8 41 8 14 42 14 13 43 13 8 44 8 14 45 14 8 46 8 9 47 9 16 48 16 15 49 15 10 50 10 16 51 16 10 52 10 11 53 11 17 54 17 16 55 16 11 56 11 17 57 17 11 58 11 12 59 12 18 60 18 17 61 17 12 62 12 18 63 18 12 64 12 13 65 13 19 66 19 18 67 18 13 68 13 19 69 19 13 70 13 14 71 14 21 72 21 20 73 20 15 74 15 21 75 21 15 76 15 16 77 16 22 78 22 21 79 21 16 80 16 22 81 22 16 82 16 17 83 17 23 84 23 22 85 22 17 86 17 23 87 23 17 88 17 18 89 18 24 90 24 23 91 23 18 92 18 24 93 24 18 94 18 19 95 19</p></triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Ground" name="Ground">
+      <node name="Ground" id="Ground" sid="Ground"><matrix sid="matrix">0.010000 0.000000 0.000000 0.019734 0.000000 0.000000 0.010000 0.000000 0.000000 -0.010000 0.000000 -0.404530 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Ground-lib"><bind_material><technique_common><instance_material symbol="Wall" target="#Wall"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>3.333333</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Ground"></instance_visual_scene>
+  </scene>
+</COLLADA>

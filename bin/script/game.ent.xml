@@ -1,0 +1,77 @@
+<World>
+	<Entity Name="camera">
+		<Pos Value="18.000000;25.000000;83.000000"/>
+		<Rot Value="-0.011832;0.988129;-0.103856;-0.112583"/>
+		<Scale Value="1.000000;1.000000;1.000000"/>
+		<Hide Value="FALSE"/>
+		<Color Value="255;255;255;255"/>
+		<Component Type="Camera">
+			<Param Name="CameraIsOrtho" Type="Bool" Value="FALSE"/>
+			<Param Name="CameraNear" Type="Float" Value="10.000000"/>
+			<Param Name="CameraFar" Type="Float" Value="1500.000000"/>
+			<Param Name="CameraOrthoY" Type="Float" Value="30.000000"/>
+			<Param Name="CameraFov" Type="Float" Value="0.400000"/>
+		</Component>
+	</Entity>
+	<Entity Name="VikingRoom">
+		<Pos Value="0.000000;0.000000;0.000000"/>
+		<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+		<Scale Value="1.000000;1.000000;1.000000"/>
+		<Hide Value="FALSE"/>
+		<Color Value="255;255;255;255"/>
+		<Component Type="Mesh">
+			<Param Name="MeshPath" Type="Str" Value="mesh/viking_room.gltf"/>
+		</Component>
+		<Entity Name="OmniL">
+			<Pos Value="-10.012000;10.670000;-4.502000"/>
+			<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+			<Scale Value="12.000000;1.000000;1.000000"/>
+			<Hide Value="FALSE"/>
+			<Color Value="243;250;0;255"/>
+			<Component Type="Omni"/>
+		</Entity>
+		<Entity Name="OmniR">
+			<Pos Value="11.411992;10.670000;-4.445000"/>
+			<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+			<Scale Value="12.000000;1.000000;1.000000"/>
+			<Hide Value="FALSE"/>
+			<Color Value="243;250;0;255"/>
+			<Component Type="Omni"/>
+		</Entity>
+		<Entity Name="SmallOmniL">
+			<Pos Value="-2.742000;4.491000;-4.794000"/>
+			<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+			<Scale Value="4.000000;1.000000;1.000000"/>
+			<Hide Value="FALSE"/>
+			<Color Value="243;250;0;255"/>
+			<Component Type="Omni"/>
+		</Entity>
+		<Entity Name="SmallOmniR">
+			<Pos Value="2.961000;4.491000;-5.124000"/>
+			<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+			<Scale Value="4.000000;1.000000;1.000000"/>
+			<Hide Value="FALSE"/>
+			<Color Value="243;250;0;255"/>
+			<Component Type="Omni"/>
+		</Entity>
+		<Entity Name="OmniFire">
+			<Pos Value="0.339782;0.726898;5.840355"/>
+			<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+			<Scale Value="17.000000;1.000000;1.000000"/>
+			<Hide Value="FALSE"/>
+			<Color Value="253;70;4;255"/>
+			<Component Type="Omni"/>
+		</Entity>
+	</Entity>
+	<Entity Name="Floor">
+		<Pos Value="0.000000;0.000000;0.000000"/>
+		<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+		<Scale Value="1.000000;1.000000;1.000000"/>
+		<Hide Value="FALSE"/>
+		<Color Value="255;255;255;255"/>
+		<Component Type="Mesh">
+			<Param Name="MeshPath" Type="Str" Value="mesh/floor.gltf"/>
+		</Component>
+	</Entity>
+</World>
+

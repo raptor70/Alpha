@@ -1,0 +1,9 @@
+void main()
+{
+    gl_Position = u_mClip * u_mProj * u_mModelView * vec4(a_vVertexPosition,1);
+	v.vPixelUV = a_vVertexUV;
+#ifdef TEXTURE_LOWERLEFT
+	v.vPixelUV.t = 1 - v.vPixelUV.t;
+#endif
+	v.vPixelColor = u_vDiffuseColor * a_vVertexColor;
+}

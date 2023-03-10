@@ -1,0 +1,5 @@
+void main()
+{
+	gl_Position = u_mClip * u_mMVP * vec4(a_vVertexPosition,1);
+	v.vPixelColor = u_vDiffuseColor * a_vVertexColor;
+}

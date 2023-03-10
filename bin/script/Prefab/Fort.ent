@@ -1,0 +1,19 @@
+<World>
+	<Entity Name="Fort">
+		<Pos X="0.500000" Y="0.000000" Z="0.500000"/>
+		<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		<Component Type="Mesh">
+			<Param Name="MeshPath" Type="Str" Value="mesh/Fort.DAE"/>
+		</Component>
+		<Entity Name="Fort_Flag">
+			<Pos X="0.000000" Y="0.000000" Z="0.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Fort_Flag.DAE"/>
+			</Component>
+		</Entity>
+	</Entity>
+</World>
+

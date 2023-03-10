@@ -1,0 +1,115 @@
+<World>
+	<Entity Name="create_lobby">
+		<Pos Value="300.000000;100.000000;0.000000"/>
+		<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+		<Scale Value="1.000000;1.000000;1.000000"/>
+		<Hide Value="FALSE"/>
+		<Color Value="255;255;255;255"/>
+		<Component Type="InputClick"/>
+		<Component Type="Quad">
+			<Param Name="QuadSizeX" Type="Float" Value="200.000000"/>
+			<Param Name="QuadSizeY" Type="Float" Value="50.000000"/>
+			<Param Name="QuadColor" Type="Color" Value="83;79;79;255"/>
+			<Param Name="QuadTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+		</Component>
+		<Component Type="Button">
+			<Param Name="ButtonHoverColor" Type="Color" Value="138;132;132;255"/>
+			<Param Name="ButtonHoverTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+			<Param Name="ButtonPressedColor" Type="Color" Value="190;181;181;255"/>
+			<Param Name="ButtonPressedTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+			<Param Name="ButtonPressedEvent" Type="Str" Value="CREATE_LOBBY"/>
+		</Component>
+		<Component Type="Text">
+			<Param Name="TextValue" Type="Str" Value="Create Lobby"/>
+			<Param Name="TextDeltaZ" Type="Float" Value="-1.000000"/>
+		</Component>
+	</Entity>
+	<Entity Name="stop_lobby">
+		<Pos Value="600.000000;100.000000;0.000000"/>
+		<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+		<Scale Value="1.000000;1.000000;1.000000"/>
+		<Hide Value="FALSE"/>
+		<Color Value="255;255;255;255"/>
+		<Component Type="InputClick"/>
+		<Component Type="Quad">
+			<Param Name="QuadSizeX" Type="Float" Value="200.000000"/>
+			<Param Name="QuadSizeY" Type="Float" Value="50.000000"/>
+			<Param Name="QuadColor" Type="Color" Value="83;79;79;255"/>
+			<Param Name="QuadTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+		</Component>
+		<Component Type="Button">
+			<Param Name="ButtonHoverColor" Type="Color" Value="138;132;132;255"/>
+			<Param Name="ButtonHoverTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+			<Param Name="ButtonPressedColor" Type="Color" Value="190;181;181;255"/>
+			<Param Name="ButtonPressedTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+			<Param Name="ButtonPressedEvent" Type="Str" Value="STOP_LOBBY"/>
+		</Component>
+		<Component Type="Text">
+			<Param Name="TextValue" Type="Str" Value="Exit Lobby"/>
+			<Param Name="TextDeltaZ" Type="Float" Value="-1.000000"/>
+		</Component>
+	</Entity>
+	<Entity Name="invite_lobby">
+		<Pos Value="900.000000;100.000000;0.000000"/>
+		<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+		<Scale Value="1.000000;1.000000;1.000000"/>
+		<Hide Value="FALSE"/>
+		<Color Value="255;255;255;255"/>
+		<Component Type="InputClick"/>
+		<Component Type="Quad">
+			<Param Name="QuadSizeX" Type="Float" Value="200.000000"/>
+			<Param Name="QuadSizeY" Type="Float" Value="50.000000"/>
+			<Param Name="QuadColor" Type="Color" Value="83;79;79;255"/>
+			<Param Name="QuadTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+		</Component>
+		<Component Type="Button">
+			<Param Name="ButtonHoverColor" Type="Color" Value="138;132;132;255"/>
+			<Param Name="ButtonHoverTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+			<Param Name="ButtonPressedColor" Type="Color" Value="190;181;181;255"/>
+			<Param Name="ButtonPressedTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+			<Param Name="ButtonPressedEvent" Type="Str" Value="INVITE_LOBBY"/>
+		</Component>
+		<Component Type="Text">
+			<Param Name="TextValue" Type="Str" Value="Invite"/>
+			<Param Name="TextDeltaZ" Type="Float" Value="-1.000000"/>
+		</Component>
+	</Entity>
+	<Entity Name="to_game">
+		<Pos Value="900.000000;200.000000;0.000000"/>
+		<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+		<Scale Value="1.000000;1.000000;1.000000"/>
+		<Hide Value="TRUE"/>
+		<Color Value="255;255;255;255"/>
+		<Component Type="InputClick"/>
+		<Component Type="Quad">
+			<Param Name="QuadSizeX" Type="Float" Value="200.000000"/>
+			<Param Name="QuadSizeY" Type="Float" Value="50.000000"/>
+			<Param Name="QuadColor" Type="Color" Value="83;79;79;255"/>
+			<Param Name="QuadTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+		</Component>
+		<Component Type="Button">
+			<Param Name="ButtonHoverColor" Type="Color" Value="138;132;132;255"/>
+			<Param Name="ButtonHoverTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+			<Param Name="ButtonPressedColor" Type="Color" Value="190;181;181;255"/>
+			<Param Name="ButtonPressedTexture" Type="Str" Value="textures/mesh/Empty.png"/>
+			<Param Name="ButtonPressedEvent" Type="Str" Value="TO_GAME"/>
+		</Component>
+		<Component Type="Text">
+			<Param Name="TextValue" Type="Str" Value="Start game"/>
+			<Param Name="TextDeltaZ" Type="Float" Value="-1.000000"/>
+		</Component>
+	</Entity>
+	<Entity Name="Background">
+		<Pos Value="960.000000;540.000000;100.000000"/>
+		<Rot Value="0.000000;0.000000;0.000000;1.000000"/>
+		<Scale Value="1.000000;1.000000;1.000000"/>
+		<Hide Value="FALSE"/>
+		<Color Value="255;255;255;255"/>
+		<Component Type="Quad">
+			<Param Name="QuadSizeX" Type="Float" Value="1920.000000"/>
+			<Param Name="QuadSizeY" Type="Float" Value="1080.000000"/>
+			<Param Name="QuadTexture" Type="Str" Value="textures/MenuBackground.png"/>
+		</Component>
+	</Entity>
+</World>
+

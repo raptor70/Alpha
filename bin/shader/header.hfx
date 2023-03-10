@@ -1,0 +1,163 @@
+layout(row_major) uniform;
+
+//-----------------------------------------------------------
+
+layout(binding = 0) uniform u_GlobalData
+{
+	mat4 	u_maViewToShadow[3];
+	mat4	u_mClip;
+	mat4	u_mInvClip;
+	mat4	u_mFramebuffer;
+	mat4	u_mInvFramebuffer;
+	vec4	u_vSunColor;
+	vec4	u_vGlobalAmbient;
+	vec4	u_vVignetteColor;
+	vec4	u_vViewSunDir;
+	vec4	u_faShadowMapDistances;
+	vec2	u_vResolution;
+	vec2	u_vSSAOScreenRadius;
+	float	u_fAmbientFactor;
+	float	u_fDiffuseFactor;
+	float	u_fSpecularFactor;
+	float	u_fEmissiveFactor;
+	float	u_fShadowStrength;
+	float	u_fNoLightBoost;
+	float	u_fSSAORadius;
+	float	u_fSSAODotBias;
+	float	u_fSSAOMultiplier;
+	float	u_fBloomSize;
+	int		u_iOutlineSize;
+	float	u_fDOFMinNearPlane;
+	float	u_fDOFMaxFarPlane;
+	float	u_fDOFNearPlaneFromFocus;
+	float	u_fDOFFarPlaneFromFocus;
+	float	u_fVignetteRadius;
+	float	u_fVignetteSmoothness;
+};
+
+//-----------------------------------------------------------
+
+layout(binding = 1) uniform u_ViewData
+{
+	mat4	u_mView;
+	mat4	u_mInvView;
+	mat4	u_mViewProj;
+	mat4	u_mInvViewProj;
+	mat4	u_mProj;
+	mat4	u_mInvProj;
+	float	u_fNear;
+	float	u_fFar;
+};
+
+//-----------------------------------------------------------
+
+layout(push_constant) uniform u_ModelData
+{
+	mat4	u_mMVP;
+	mat4	u_mModelView;
+	mat4	u_mModel;
+	vec4 	u_vDiffuseColor;
+	vec4 	u_vOutlineColor;
+};
+
+//-----------------------------------------------------------
+
+layout(binding = 3) uniform u_MaterialData
+{
+	vec4	u_vEmissiveColor;
+	bool	u_bIsFont;
+};
+
+//-----------------------------------------------------------
+
+struct VSOut
+{
+	vec4 vPixelPosition;
+	vec3 vPixelNormal;
+	vec2 vPixelUV;
+	vec4 vPixelColor;
+	vec4 vVertexColor;	
+	vec4 vViewPosition;	
+	vec3 vViewNormal;
+};
+
+//-----------------------------------------------------------
+
+#ifdef VFX
+layout (location = 0) in vec3 a_vVertexPosition; 
+layout (location = 1) in vec3 a_vVertexNormal;   
+layout (location = 2) in vec2 a_vVertexUV;       
+layout (location = 3) in vec4 a_vVertexColor;   
+layout	(location = 0) out VSOut v;
+#endif
+
+//-----------------------------------------------------------
+
+#ifdef PFX
+layout(location = 0) in VSOut v;
+#endif
+
+//-----------------------------------------------------------
+
+#define MATH_2_PI	6.283185307179586476925286766559
+#define MATH_PI		3.1415926535897932384626433832795
+
+//-----------------------------------------------------------
+
+vec2 Rotate(vec2 _vector, float _angle)
+{
+	float c = cos(_angle);
+	float s = sin(_angle);
+	return vec2(
+		c*_vector.x - s*_vector.y,
+		s*_vector.x + c*_vector.y
+	);
+}
+
+//-----------------------------------------------------------
+
+vec4 GetViewPos(sampler2D _sDepth, vec2 _uv)
+{
+	vec3 screenPos;
+	screenPos.x = _uv.x;
+	screenPos.y = _uv.y;
+	screenPos.z = texture(_sDepth, _uv).x;
+	
+	vec4 pos = u_mInvProj * u_mInvClip * u_mInvFramebuffer * vec4(screenPos,1);
+	return vec4(pos.xyz / pos.w, 1);	
+}
+
+//-----------------------------------------------------------
+
+vec2 PackNormal(vec3 _normal)
+{
+	// https://aras-p.info/texts/CompactNormalStorage.html
+	return _normal.xy*0.5+0.5;
+}
+
+//-----------------------------------------------------------
+
+vec4 UnpackNormal(vec2 _packedNormal)
+{
+	vec4 normal;
+	normal.xy = _packedNormal*2-1;
+	normal.z = sqrt(1 - min(dot(normal.xy,normal.xy),1));
+	normal.w = 0;
+	return normalize(normal);
+}
+
+//-----------------------------------------------------------
+
+float PackSpecularPower(float _power)
+{
+	// https://www.3dgep.com/forward-plus/
+	return log2( _power ) / 10.5;
+}
+
+//-----------------------------------------------------------
+
+float UnpackSpecularPower(float _packedPower)
+{
+	// https://www.3dgep.com/forward-plus/
+	return exp2( _packedPower * 10.5);
+}

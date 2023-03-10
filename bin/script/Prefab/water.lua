@@ -1,0 +1,3 @@
+function Init(self)
+	
+end

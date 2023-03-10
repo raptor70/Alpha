@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright (C) 2013 Google Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<resources>
+  <string name="app_id">478740128893</string>
+  <string name="achievement_discovered">CgkI_ciKufcNEAIQAA</string>
+  <string name="achievement_burned">CgkI_ciKufcNEAIQAQ</string>
+  <string name="achievement_drowned">CgkI_ciKufcNEAIQAg</string>
+  <string name="achievement_suffocated">CgkI_ciKufcNEAIQAw</string>
+  <string name="achievement_transformed">CgkI_ciKufcNEAIQFw</string>
+  <string name="achievement_science_intern">CgkI_ciKufcNEAIQBA</string>
+  <string name="achievement_apprentice">CgkI_ciKufcNEAIQBQ</string>
+  <string name="achievement_scientist">CgkI_ciKufcNEAIQBg</string>
+  <string name="achievement_expert">CgkI_ciKufcNEAIQBw</string>
+  <string name="achievement_professor">CgkI_ciKufcNEAIQFQ</string>
+  <string name="achievement_chaining_star">CgkI_ciKufcNEAIQCA</string>
+  <string name="achievement_diversity">CgkI_ciKufcNEAIQCQ</string>
+  <string name="achievement_ultrices_hyacintho">CgkI_ciKufcNEAIQCg</string>
+  <string name="achievement_purpura_lignum">CgkI_ciKufcNEAIQCw</string>
+  <string name="achievement_aurantiaco_ignis">CgkI_ciKufcNEAIQDA</string>
+  <string name="achievement_tardus_viridis">CgkI_ciKufcNEAIQDQ</string>
+  <string name="achievement_exploda_bulla">CgkI_ciKufcNEAIQDg</string>
+  <string name="achievement_mutatio_colorem">CgkI_ciKufcNEAIQFg</string>
+  <string name="leaderboard_overall_score">CgkI_ciKufcNEAIQDw</string>
+  <string name="leaderboard_total_score_chapter_1">CgkI_ciKufcNEAIQEA</string>
+  <string name="leaderboard_total_score_chapter_2">CgkI_ciKufcNEAIQEQ</string>
+  <string name="leaderboard_total_score_chapter_3">CgkI_ciKufcNEAIQEg</string>
+  <string name="leaderboard_total_score_chapter_4">CgkI_ciKufcNEAIQEw</string>
+  <string name="leaderboard_total_score_chapter_5">CgkI_ciKufcNEAIQGA</string>
+</resources>

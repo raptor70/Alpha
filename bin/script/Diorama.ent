@@ -1,0 +1,560 @@
+<World>
+	<Entity Name="Ground">
+		<Pos X="15.000000" Y="-2.200000" Z="15.000000"/>
+		<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		<Component Type="Mesh">
+			<Param Name="MeshPath" Type="Str" Value="mesh/Ground.DAE"/>
+		</Component>
+	</Entity>
+	<Entity Name="Board">
+		<Pos X="21.500000" Y="0.000000" Z="14.500000"/>
+		<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		<Component Type="Mesh">
+			<Param Name="MeshPath" Type="Str" Value="mesh/Board.DAE"/>
+		</Component>
+	</Entity>
+	<Entity Name="FakeFort">
+		<Pos X="0.000000" Y="0.200000" Z="0.000000"/>
+		<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		<Entity Name="Tower">
+			<Pos X="6.500000" Y="0.000000" Z="6.500000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Script">
+				<Param Name="ScriptPath" Type="Str" Value="script/Prefab/Tower.lua"/>
+			</Component>
+		</Entity>
+		<Entity Name="Fort">
+			<Pos X="6.000000" Y="0.000000" Z="4.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Script">
+				<Param Name="ScriptPath" Type="Str" Value="script/Prefab/Fort.lua"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="6.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="5.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="8.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="7.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Tower">
+			<Pos X="8.500000" Y="0.000000" Z="6.500000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Script">
+				<Param Name="ScriptPath" Type="Str" Value="script/Prefab/Tower.lua"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="9.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="7.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="6.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="5.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="10.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="10.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="4.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="-0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="2.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="0.000000" Y="-0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="2.000000" Y="0.000000" Z="5.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="4.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="3.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="9.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="8.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="7.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="6.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Tower">
+			<Pos X="8.500000" Y="0.000000" Z="4.500000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Script">
+				<Param Name="ScriptPath" Type="Str" Value="script/Prefab/Tower.lua"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="5.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="4.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="3.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="3.000000" Y="0.000000" Z="5.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="4.000000" Y="0.000000" Z="5.000000"/>
+			<Rot X="0.000000" Y="1.000000" Z="0.000000" W="-0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="2.000000" Y="0.000000" Z="4.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="2.000000" Y="0.000000" Z="3.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="4.000000" Y="0.000000" Z="6.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="4.000000" Y="0.000000" Z="7.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+	</Entity>
+	<Entity Name="FakeFort">
+		<Pos X="26.000000" Y="0.200000" Z="28.000000"/>
+		<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		<Entity Name="Tower">
+			<Pos X="6.500000" Y="0.000000" Z="6.500000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Script">
+				<Param Name="ScriptPath" Type="Str" Value="script/Prefab/Tower.lua"/>
+			</Component>
+		</Entity>
+		<Entity Name="Fort">
+			<Pos X="6.999994" Y="0.000000" Z="4.000002"/>
+			<Rot X="0.000000" Y="-0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Script">
+				<Param Name="ScriptPath" Type="Str" Value="script/Prefab/Fort.lua"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="6.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="5.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="8.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="7.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Tower">
+			<Pos X="8.500000" Y="0.000000" Z="6.500000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Script">
+				<Param Name="ScriptPath" Type="Str" Value="script/Prefab/Tower.lua"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="9.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="7.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="6.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="5.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="10.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="10.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="4.000000" Y="0.000000" Z="8.000000"/>
+			<Rot X="0.000000" Y="-0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="2.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="0.000000" Y="-0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="2.000000" Y="0.000000" Z="5.000000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="4.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="10.000000" Y="0.000000" Z="3.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="9.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="8.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="7.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="6.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Tower">
+			<Pos X="8.500000" Y="0.000000" Z="4.500000"/>
+			<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Script">
+				<Param Name="ScriptPath" Type="Str" Value="script/Prefab/Tower.lua"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="5.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="4.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="3.000000" Y="0.000000" Z="2.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="3.000000" Y="0.000000" Z="5.000000"/>
+			<Rot X="-0.000000" Y="1.000000" Z="-0.000000" W="0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall_corner">
+			<Pos X="4.000000" Y="0.000000" Z="5.000000"/>
+			<Rot X="0.000000" Y="1.000000" Z="0.000000" W="-0.000000"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Corner.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="2.000000" Y="0.000000" Z="4.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="2.000000" Y="0.000000" Z="3.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="4.000000" Y="0.000000" Z="6.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+		<Entity Name="Wall2">
+			<Pos X="4.000000" Y="0.000000" Z="7.000000"/>
+			<Rot X="0.000000" Y="0.707107" Z="0.000000" W="0.707107"/>
+			<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+			<Component Type="Mesh">
+				<Param Name="MeshPath" Type="Str" Value="mesh/Wall_Straight.DAE"/>
+			</Component>
+		</Entity>
+	</Entity>
+	<Entity Name="camera">
+		<Pos X="21.500000" Y="60.000000" Z="-30.000000"/>
+		<Rot X="0.461749" Y="0.000000" Z="0.000000" W="0.887011"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		<Component Type="Camera">
+			<Param Name="CameraIsOrtho" Type="Bool" Value="FALSE"/>
+			<Param Name="CameraNear" Type="Float" Value="10.000000"/>
+			<Param Name="CameraFar" Type="Float" Value="1500.000000"/>
+			<Param Name="CameraFov" Type="Float" Value="0.400000"/>
+		</Component>
+	</Entity>
+	<Entity Name="Cursor">
+		<Pos X="5.000000" Y="0.100000" Z="13.000000"/>
+		<Rot X="0.000000" Y="0.000000" Z="0.000000" W="1.000000"/>
+		<Scale X="1.000000" Y="1.000000" Z="1.000000"/>
+		<Component Type="Mesh">
+			<Param Name="MeshPath" Type="Str" Value="mesh/Cursor.DAE"/>
+		</Component>
+	</Entity>
+</World>
+

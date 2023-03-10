@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="sob_custom" default="help">
+  <target name="-post-compile">
+    <exec executable="copy_to_assets.bat">
+      <arg line=""/>
+    </exec>
+  </target>
+</project>
