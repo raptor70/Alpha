@@ -359,10 +359,18 @@ Bool RendererDriverVulkan::Initialize()
 	debugInfo.pfnUserCallback = VK_DebugCall;
 #endif
 
+	VkApplicationInfo appInfo{};
+	appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+	appInfo.pApplicationName = "No App Name";
+	appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+	appInfo.pEngineName = "No Engine";
+	appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
+	appInfo.apiVersion = VK_API_VERSION_1_3;
+
 	S32 nbExtension = 0;
 	VkInstanceCreateInfo instanceInfo = {};
 	instanceInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
-	instanceInfo.pApplicationInfo = NULL; // TODO : appinfo
+	instanceInfo.pApplicationInfo = &appInfo;
 	instanceInfo.enabledExtensionCount = _countof(g_InstanceExtensions);
 	instanceInfo.ppEnabledExtensionNames = g_InstanceExtensions;
 	instanceInfo.enabledLayerCount = g_LayerCount;
