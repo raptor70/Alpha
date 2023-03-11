@@ -1,4 +1,4 @@
 Project codename Alpha 
 =====
 
-![Capture](/capture.png?raw=true "Engine WIP editor capture")
+![Capture](https://github.com/raptor70/Alpha/blob/main/doc/capture.png?raw=true "Engine WIP editor capture")
