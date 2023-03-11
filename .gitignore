@@ -1,5 +1,6 @@
 bin/log
 bin/cache
+bin/tmp
 bin/save
 src/.vs
 src/obj

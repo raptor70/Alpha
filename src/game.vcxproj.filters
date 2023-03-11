@@ -1247,4 +1247,9 @@
       <Filter>engine\editor\_old\moc</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="engine.natvis">
+      <Filter>engine</Filter>
+    </Natvis>
+  </ItemGroup>
 </Project>

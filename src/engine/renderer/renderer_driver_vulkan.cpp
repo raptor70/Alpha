@@ -74,7 +74,7 @@ Bool VKCHECK(VkResult ret)
 		}
 
 
-		LOGGER_LogError("Vulkan error : %s\n", pErr);
+		LOGGER_LogError("Vulkan : %s\n", pErr);
 		DEBUG_Break();
 		return FALSE;
 	}
@@ -93,16 +93,16 @@ static VKAPI_ATTR VkBool32 VKAPI_CALL VK_DebugCall(VkDebugUtilsMessageSeverityFl
 
 	if (_messageSeverity >= VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT)
 	{
-		LOGGER_LogError("Vulkan %s error: %s\n", pType, _pCallbackData->pMessage);
+		LOGGER_LogError("Vulkan %s : %s\n", pType, _pCallbackData->pMessage);
 		DEBUG_Break();
 	}
 	else if (_messageSeverity >= VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT)
 	{
-		LOGGER_LogWarning("Vulkan %s warning: %s\n", pType, _pCallbackData->pMessage);
+		LOGGER_LogWarning("Vulkan %s : %s\n", pType, _pCallbackData->pMessage);
 	}
 	else
 	{
-		LOGGER_Log("Vulkan %s info: %s\n", pType, _pCallbackData->pMessage);
+		LOGGER_Log("Vulkan %s : %s\n", pType, _pCallbackData->pMessage);
 	}
 
 	//_pCallbackData->pObjects : handles
@@ -683,6 +683,9 @@ Bool	RendererDriverVulkan::CreateSwapchain(SDriverVKRendererData* _pRendererData
 			break;
 		}
 	}
+
+	VkImageFormatProperties properties;
+	VkResult  res = vkGetPhysicalDeviceImageFormatProperties(m_PhysicalDevice, pSurfaceFormat->format, VK_IMAGE_TYPE_2D, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT, 0, &properties);
 
 	// present modes
 	uint32_t iPresentModeCount = 0;

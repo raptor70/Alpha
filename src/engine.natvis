@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="ArrayOf&lt;*&gt;">
+    <DisplayString>{{[Array {"$T1"}] count = {m_iCount}}}</DisplayString>
+    <Expand>
+      <ArrayItems>
+        <Size>m_iCount</Size>
+        <ValuePointer>m_pArray</ValuePointer>
+      </ArrayItems>
+      <Item Name="[count]" ExcludeView="simple">m_iCount</Item>
+      <Item Name="[size]" ExcludeView="simple">m_iSize</Item>
+    </Expand>
+  </Type>
+  <Type Name="_PtrTo&lt;*,*&gt;">
+    <DisplayString Condition="m_pInfo == 0 || m_pInfo->m_ptr == 0">{{[Ptr {"$T1"}] NULL}}</DisplayString>
+    <DisplayString>{{[Ptr {"$T1"}] {m_pInfo->m_ptr}}}</DisplayString>    
+    <Expand>
+      <ExpandedItem>m_pInfo->m_ptr</ExpandedItem>
+      <Item Name="[refCount]" Condition="m_pInfo" ExcludeView="simple">m_pInfo->m_refcount</Item>
+    </Expand>
+  </Type>
+</AutoVisualizer>

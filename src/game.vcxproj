@@ -532,6 +532,9 @@
     <None Include="engine\editor\ui\ui_main.ui" />
     <None Include="engine\editor\ui\ui_top_bar.ui" />
   </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="engine.natvis" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
