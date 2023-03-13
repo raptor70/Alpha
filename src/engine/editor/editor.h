@@ -109,6 +109,7 @@ protected:
 #include <editor/editor_dockspace.h>
 #include <editor/editor_camera.h>
 #include <editor/editor_gizmo.h>
+#include <editor/editor_action_stack.h>
 
 class EditorPanelTreeView;
 class EditorPanelProperties;
@@ -147,6 +148,7 @@ private:
 	EditorDockspaceRef			m_pDockspace = NULL;
 
 	EditorPanelRefArray	m_Panels;
+	EditorActionStack	m_ActionsStack;
 
 	NameArray		m_daCommands;
 	EditorCamera	m_Camera;

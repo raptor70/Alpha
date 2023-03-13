@@ -116,6 +116,7 @@
 #define CACHE_DIR "cache/"
 #define	CACHE_VERSION	10
 #define TMP_DIR "tmp/"
+#define SCRIPT_DOC_FILE "../docs/params.txt"
 
 #include "core/primitive.h"
 #include "debug/debug.h"

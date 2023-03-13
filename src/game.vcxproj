@@ -176,6 +176,7 @@
     <ClInclude Include="engine\debug\profiler_optick.h" />
     <ClInclude Include="engine\debug\profiler_pix.h" />
     <ClInclude Include="engine\editor\editor_action.h" />
+    <ClInclude Include="engine\editor\editor_action_stack.h" />
     <ClInclude Include="engine\editor\editor_camera.h" />
     <ClInclude Include="engine\editor\editor_dockspace.h" />
     <ClInclude Include="engine\editor\editor_entities_properties.h" />

@@ -1208,6 +1208,9 @@
     <ClInclude Include="engine\platform\platform_win32.h">
       <Filter>engine\platform</Filter>
     </ClInclude>
+    <ClInclude Include="engine\editor\editor_action_stack.h">
+      <Filter>engine\editor\_old\action</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="engine\editor\generate_moc.bat">

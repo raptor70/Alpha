@@ -1,5 +1,5 @@
-#ifndef __EDITOR_ACTION_H__
-#define __EDITOR_ACTION_H__
+#ifndef __EDITOR_ACTION_STACK_H__
+#define __EDITOR_ACTION_STACK_H__
 #include "editor_include.h"
 #ifdef USE_EDITOR
 
@@ -61,24 +61,73 @@ END_SUPER_CLASS
 #endif // USE_EDITOR
 
 #ifdef USE_EDITOR_V2
-class EditorAction
+#include <editor/editor_action.h>
+
+class EditorActionStack
 {
 public:
-	virtual void	Do() = 0;
-	virtual void	UnDo() = 0;
-};
+	template<typename T, class... Args>
+	void DoAction(Args... _args)
+	{
+		Node* pNewNode = NEW Node;
+		pNewNode->m_pAction = NEW T(_args...);
 
-typedef RefTo<EditorAction>	EditorActionRef;
+		if (m_pCurrentNode)
+		{
+			m_pCurrentNode->m_pNext = pNewNode;
+			pNewNode->m_pPrev = m_pCurrentNode;
+			m_pCurrentNode = m_pCurrentNode->m_pNext;
+		}
+		else // first
+		{
+			m_pFirstNode = pNewNode;
+			m_pCurrentNode = m_pFirstNode;
+		}
+		
+		pNewNode->m_pAction->Do();
+	}
 
-class EditorActionDummy : public EditorAction
-{
-public:
-	EditorActionDummy(const Char* _pName) { m_pName = _pName; }
-	virtual void	Do() { LOGGER_Log("Do %s\n", m_pName); }
-	virtual void	UnDo() { LOGGER_Log("UnDo %s\n", m_pName); }
+	void UnDo()
+	{
+		if (m_pCurrentNode)
+		{
+			m_pCurrentNode->m_pAction->UnDo();
+			m_pCurrentNode = m_pCurrentNode->m_pPrev;
+		}
+	}
 
-	const Char* m_pName = NULL;
+	void ReDo()
+	{
+		if (m_pCurrentNode)
+		{
+			if (m_pCurrentNode->m_pNext)
+			{
+				m_pCurrentNode = m_pCurrentNode->m_pNext;
+				m_pCurrentNode->m_pAction->Do();
+			}
+		}
+		else if (m_pFirstNode)
+		{
+			m_pCurrentNode = m_pFirstNode;
+			m_pCurrentNode->m_pAction->Do();
+		}
+	}
 
+	void Flush()
+	{
+		m_pCurrentNode = NULL;
+		m_pFirstNode = NULL;
+	}
+
+	struct Node
+	{
+		EditorActionRef	m_pAction;
+		RefTo<Node>		m_pNext;
+		PtrTo<Node>		m_pPrev;
+	};
+
+	RefTo<Node>	m_pFirstNode;		// chain
+	PtrTo<Node>	m_pCurrentNode;
 };
 
 #endif

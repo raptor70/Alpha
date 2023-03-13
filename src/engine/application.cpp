@@ -411,7 +411,7 @@ Bool Application::Init(S32 _argc,Char ** _argv)
 
 #if _DEBUG
 	// generate doc
-	EntityComponentFactory::GetInstance().GenerateDoc("../doc/params.txt");
+	EntityComponentFactory::GetInstance().GenerateDoc(SCRIPT_DOC_FILE);
 #endif
 
 	LOGGER_Log("Init - Duration : %.2fs\n", initTimer.GetSecondCount());
